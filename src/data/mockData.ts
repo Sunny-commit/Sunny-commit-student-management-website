@@ -1,0 +1,395 @@
+import { Student, Course, Attendance, Grade, Document, Announcement } from '../types';
+
+// Mock Students
+export const mockStudents: Student[] = [
+  {
+    id: '1',
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'john.doe@school.edu',
+    dateOfBirth: '2005-03-15',
+    gender: 'male',
+    phone: '555-123-4567',
+    address: '123 Main St, Anytown, USA',
+    enrollmentDate: '2020-09-01',
+    status: 'active',
+    avatar: 'https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg?auto=compress&cs=tinysrgb&w=150',
+    parent: {
+      name: 'Robert Doe',
+      email: 'robert.doe@example.com',
+      phone: '555-123-4599',
+    },
+  },
+  {
+    id: '2',
+    firstName: 'Jane',
+    lastName: 'Smith',
+    email: 'jane.smith@school.edu',
+    dateOfBirth: '2006-07-22',
+    gender: 'female',
+    phone: '555-222-3333',
+    address: '456 Oak Ave, Somewhere, USA',
+    enrollmentDate: '2021-09-01',
+    status: 'active',
+    avatar: 'https://images.pexels.com/photos/6206980/pexels-photo-6206980.jpeg?auto=compress&cs=tinysrgb&w=150',
+    parent: {
+      name: 'Susan Smith',
+      email: 'susan.smith@example.com',
+      phone: '555-222-4444',
+    },
+  },
+  {
+    id: '3',
+    firstName: 'Michael',
+    lastName: 'Johnson',
+    email: 'michael.johnson@school.edu',
+    dateOfBirth: '2005-11-10',
+    gender: 'male',
+    phone: '555-333-4444',
+    address: '789 Pine St, Elsewhere, USA',
+    enrollmentDate: '2020-09-01',
+    status: 'active',
+    avatar: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=150',
+  },
+  {
+    id: '4',
+    firstName: 'Emily',
+    lastName: 'Davis',
+    email: 'emily.davis@school.edu',
+    dateOfBirth: '2006-04-05',
+    gender: 'female',
+    phone: '555-444-5555',
+    address: '101 Maple Dr, Nowhere, USA',
+    enrollmentDate: '2021-09-01',
+    status: 'active',
+    avatar: 'https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=150',
+  },
+  {
+    id: '5',
+    firstName: 'David',
+    lastName: 'Wilson',
+    email: 'david.wilson@school.edu',
+    dateOfBirth: '2005-09-18',
+    gender: 'male',
+    phone: '555-555-6666',
+    address: '202 Birch Ln, Anyplace, USA',
+    enrollmentDate: '2020-09-01',
+    status: 'active',
+  },
+];
+
+// Mock Courses
+export const mockCourses: Course[] = [
+  {
+    id: '1',
+    code: 'MATH101',
+    name: 'Algebra I',
+    description: 'Introduction to algebraic expressions, equations, and inequalities.',
+    credits: 4,
+    semester: 'Fall 2023',
+    teacher: {
+      id: '1',
+      name: 'Prof. Richardson',
+    },
+    schedule: [
+      {
+        day: 'Monday',
+        startTime: '09:00',
+        endTime: '10:30',
+        room: 'A101',
+      },
+      {
+        day: 'Wednesday',
+        startTime: '09:00',
+        endTime: '10:30',
+        room: 'A101',
+      },
+    ],
+    students: ['1', '2', '3', '4', '5'],
+  },
+  {
+    id: '2',
+    code: 'ENG101',
+    name: 'English Composition',
+    description: 'Fundamentals of college-level writing and composition.',
+    credits: 3,
+    semester: 'Fall 2023',
+    teacher: {
+      id: '2',
+      name: 'Prof. Lewis',
+    },
+    schedule: [
+      {
+        day: 'Tuesday',
+        startTime: '11:00',
+        endTime: '12:30',
+        room: 'B202',
+      },
+      {
+        day: 'Thursday',
+        startTime: '11:00',
+        endTime: '12:30',
+        room: 'B202',
+      },
+    ],
+    students: ['1', '2', '4'],
+  },
+  {
+    id: '3',
+    code: 'PHYS101',
+    name: 'Physics I',
+    description: 'Introduction to mechanics, energy, and thermodynamics.',
+    credits: 4,
+    semester: 'Fall 2023',
+    teacher: {
+      id: '3',
+      name: 'Prof. Johnson',
+    },
+    schedule: [
+      {
+        day: 'Monday',
+        startTime: '13:00',
+        endTime: '14:30',
+        room: 'C303',
+      },
+      {
+        day: 'Wednesday',
+        startTime: '13:00',
+        endTime: '14:30',
+        room: 'C303',
+      },
+      {
+        day: 'Friday',
+        startTime: '13:00',
+        endTime: '15:00',
+        room: 'LAB101',
+      },
+    ],
+    students: ['1', '3', '5'],
+  },
+  {
+    id: '4',
+    code: 'HIST101',
+    name: 'World History',
+    description: 'Survey of major events and developments in world history.',
+    credits: 3,
+    semester: 'Fall 2023',
+    teacher: {
+      id: '4',
+      name: 'Prof. Martinez',
+    },
+    schedule: [
+      {
+        day: 'Tuesday',
+        startTime: '09:00',
+        endTime: '10:30',
+        room: 'D404',
+      },
+      {
+        day: 'Thursday',
+        startTime: '09:00',
+        endTime: '10:30',
+        room: 'D404',
+      },
+    ],
+    students: ['2', '3', '4', '5'],
+  },
+];
+
+// Mock Attendance (for student ID 1 in course ID 1)
+export const mockAttendance: Attendance[] = [
+  {
+    id: '1',
+    studentId: '1',
+    courseId: '1',
+    date: '2023-09-05',
+    status: 'present',
+  },
+  {
+    id: '2',
+    studentId: '1',
+    courseId: '1',
+    date: '2023-09-07',
+    status: 'present',
+  },
+  {
+    id: '3',
+    studentId: '1',
+    courseId: '1',
+    date: '2023-09-12',
+    status: 'absent',
+    notes: 'Doctor appointment',
+  },
+  {
+    id: '4',
+    studentId: '1',
+    courseId: '1',
+    date: '2023-09-14',
+    status: 'present',
+  },
+  {
+    id: '5',
+    studentId: '1',
+    courseId: '1',
+    date: '2023-09-19',
+    status: 'late',
+    notes: 'Arrived 15 minutes late',
+  },
+];
+
+// Mock Grades
+export const mockGrades: Grade[] = [
+  {
+    id: '1',
+    studentId: '1',
+    courseId: '1',
+    assignmentId: 'quiz1',
+    score: 85,
+    maxScore: 100,
+    type: 'quiz',
+    date: '2023-09-10',
+  },
+  {
+    id: '2',
+    studentId: '1',
+    courseId: '1',
+    assignmentId: 'hw1',
+    score: 92,
+    maxScore: 100,
+    type: 'assignment',
+    date: '2023-09-15',
+  },
+  {
+    id: '3',
+    studentId: '1',
+    courseId: '1',
+    assignmentId: 'exam1',
+    score: 78,
+    maxScore: 100,
+    type: 'exam',
+    date: '2023-10-01',
+  },
+  {
+    id: '4',
+    studentId: '1',
+    courseId: '2',
+    assignmentId: 'paper1',
+    score: 88,
+    maxScore: 100,
+    type: 'assignment',
+    date: '2023-09-20',
+  },
+  {
+    id: '5',
+    studentId: '1',
+    courseId: '3',
+    assignmentId: 'lab1',
+    score: 95,
+    maxScore: 100,
+    type: 'assignment',
+    date: '2023-09-22',
+  },
+];
+
+// Mock Documents
+export const mockDocuments: Document[] = [
+  {
+    id: '1',
+    name: 'Fall 2023 Schedule',
+    type: 'other',
+    url: '#',
+    uploadDate: '2023-08-25',
+    size: 245760, // ~240 KB
+    format: 'pdf',
+  },
+  {
+    id: '2',
+    name: 'Student ID Card',
+    type: 'id_card',
+    url: '#',
+    uploadDate: '2023-08-30',
+    studentId: '1',
+    size: 102400, // ~100 KB
+    format: 'jpg',
+  },
+  {
+    id: '3',
+    name: 'Course Syllabus - MATH101',
+    type: 'other',
+    url: '#',
+    uploadDate: '2023-09-01',
+    courseId: '1',
+    size: 512000, // ~500 KB
+    format: 'pdf',
+  },
+  {
+    id: '4',
+    name: 'Progress Report - September',
+    type: 'report_card',
+    url: '#',
+    uploadDate: '2023-10-01',
+    studentId: '1',
+    size: 307200, // ~300 KB
+    format: 'pdf',
+  },
+];
+
+// Mock Announcements
+export const mockAnnouncements: Announcement[] = [
+  {
+    id: '1',
+    title: 'Fall Semester Welcome',
+    content: 'Welcome to the Fall 2023 semester! We\'re excited to have you back on campus. Please check your schedules and be on time for your classes.',
+    date: '2023-09-01',
+    authorId: '1',
+    authorName: 'Principal Stevens',
+    targetAudience: 'all',
+    isImportant: true,
+  },
+  {
+    id: '2',
+    title: 'Math Club Meeting',
+    content: 'The Math Club will meet this Friday at 3:30 PM in room B204. We\'ll be discussing the upcoming math competition and forming teams.',
+    date: '2023-09-10',
+    authorId: '2',
+    authorName: 'Prof. Richardson',
+    targetAudience: 'students',
+    isImportant: false,
+  },
+  {
+    id: '3',
+    title: 'Parent-Teacher Conference',
+    content: 'The first parent-teacher conference of the semester is scheduled for October 15-16. More details will be shared soon.',
+    date: '2023-09-15',
+    authorId: '1',
+    authorName: 'Principal Stevens',
+    targetAudience: 'parents',
+    isImportant: true,
+  },
+  {
+    id: '4',
+    title: 'Campus Maintenance Notice',
+    content: 'The south parking lot will be closed for maintenance from September 20-22. Please use the north or east parking lots during this time.',
+    date: '2023-09-18',
+    authorId: '3',
+    authorName: 'Facilities Management',
+    targetAudience: 'all',
+    isImportant: false,
+  },
+  {
+    id: '5',
+    title: 'Midterm Exam Schedule',
+    content: 'Midterm exams will be held from October 10-14. Please check the attached schedule for your exam times and locations.',
+    date: '2023-09-25',
+    authorId: '1',
+    authorName: 'Academic Affairs',
+    targetAudience: 'students',
+    isImportant: true,
+    attachments: [
+      {
+        name: 'Midterm_Schedule_Fall2023.pdf',
+        url: '#',
+      },
+    ],
+  },
+];
