@@ -27,8 +27,8 @@ A modern, responsive web application designed to manage student data, attendance
 
 ## 🚀 Screenshorts
 -interface of the website
+![Uploading Screenshot (24).PNG…]()
 
-![Screenshot (24)](https://github.com/user-attachments/assets/e4c2d96f-ee89-4efb-9096-6f0f7eac293e)
 
 
 -after login through the website
