@@ -28,15 +28,18 @@ A modern, responsive web application designed to manage student data, attendance
 ## 🚀 Screenshorts
 -interface of the website
 
-![image](https://github.com/user-attachments/assets/e4c51826-a07e-443f-8d77-76eae5c6a1a5)
+![Screenshot (24)](https://github.com/user-attachments/assets/e4c2d96f-ee89-4efb-9096-6f0f7eac293e)
+
 
 -after login through the website
 
-![image](https://github.com/user-attachments/assets/333aec0d-f3be-44d3-a545-5b5031f65080)
+![Screenshot (25)](https://github.com/user-attachments/assets/03193cdb-b29b-44d5-95c3-caba71fcf2a9)
+
 
 -Announcements can be displayed as.
 
-![image](https://github.com/user-attachments/assets/739b4199-a7c1-430f-8a2b-3072f490976c)
+![Screenshot (26)](https://github.com/user-attachments/assets/bffe320c-3f99-4945-9599-41d61f5ab3ea)
+
 
 
 
