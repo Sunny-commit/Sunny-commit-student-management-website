@@ -38,7 +38,8 @@ A modern, responsive web application designed to manage student data, attendance
 
 -Announcements can be displayed as.
 
-![Screenshot (26)](https://github.com/user-attachments/assets/bffe320c-3f99-4945-9599-41d61f5ab3ea)
+![Screenshot (26)](https://github.com/user-attachments/assets/d7db79b4-16ee-428d-972c-bf8653a89b96)
+
 
 
 
