@@ -78,9 +78,6 @@ npm run dev
 * Theme switcher and accessibility improvements
 
 ## 📜 License
+This project is licensed under the MIT License.
 
-MIT
 
-```
-
----
