@@ -27,15 +27,15 @@ A modern, responsive web application designed to manage student data, attendance
 
 ## 🚀 Screenshorts
 -interface of the website
-![Screenshot (24)](https://github.com/user-attachments/assets/d2a49d98-c04b-4713-a36b-e2d80c76d983)
+https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(24).PNG
 
 
 -after login through the website
-![Screenshot (25)](https://github.com/user-attachments/assets/60bf4aeb-f107-4aef-9fb9-f5f3af589e4b)
+
 
 
 -Announcements can be displayed as
-![Screenshot (26)](https://github.com/user-attachments/assets/e1ab9267-eebf-4c71-8b1b-e804f6662824)
+
 
 
 
