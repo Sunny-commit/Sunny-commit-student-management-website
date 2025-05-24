@@ -29,13 +29,11 @@ A modern, responsive web application designed to manage student data, attendance
 -interface of the website
 https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(24).PNG
 
-
 -after login through the website
-
-
+https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(25).PNG
 
 -Announcements can be displayed as
-
+https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(26).PNG
 
 
 
@@ -47,8 +45,8 @@ https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/mai
 
 ## 📁 Project Structure (simplified)
 
-```
 
+```
 src/
 ├── contexts/          # Auth context
 ├── data/              # Mock student/course data
