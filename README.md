@@ -1,5 +1,4 @@
 
-```markdown
 # Student Management Website
 
 A modern, responsive web application designed to manage student data, attendance, grades, documents, and communication within an academic institution. Built using **React**, **TypeScript**, and **Tailwind CSS**, the system offers a clean UI and role-based access for administrators and students.
@@ -23,30 +22,20 @@ A modern, responsive web application designed to manage student data, attendance
 - **Routing**: React Router
 - **Build Tools**: PostCSS, Vite
 
+## 🖼️ Screenshots
 
+- Interface of the website:  
+  ![Interface](https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(24).PNG)
 
-## 🚀 Screenshorts
--interface of the website
-https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(24).PNG
+- After login through the website:  
+  ![After Login](https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(25).PNG)
 
--after login through the website
-https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(25).PNG
-
--Announcements can be displayed as
-https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(26).PNG
-
-
-
-
-
-
-
-
+- Announcements display:  
+  ![Announcements](https://github.com/Sunny-commit/Sunny-commit-student-management-website/blob/main/Screenshot%20(26).PNG)
 
 ## 📁 Project Structure (simplified)
 
-
-```
+```text
 src/
 ├── contexts/          # Auth context
 ├── data/              # Mock student/course data
@@ -56,7 +45,6 @@ src/
 ├── types/             # TypeScript types
 ├── App.tsx            # App entry
 ├── main.tsx           # Vite main file
-
 ````
 
 ## 📦 Installation
@@ -64,7 +52,7 @@ src/
 ```bash
 npm install
 npm run dev
-````
+```
 
 ## 🧠 Future Enhancements
 
@@ -74,6 +62,7 @@ npm run dev
 * Theme switcher and accessibility improvements
 
 ## 📜 License
+
 This project is licensed under the MIT License.
 
-
+```
